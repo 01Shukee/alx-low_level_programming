@@ -5,19 +5,17 @@
  *
  * Return: Always 0(Success)
  */
-
 int main(void)
 {
-    int i = 0;
-
-    while (i < 10)
-    {
-        printf("%d", i);
-        i++;
-    }
-
-    printf("\n");
-
-    return (0);
+	char ch = '0';
+	int i = 0;
+	/* your code goes there */
+	while (i < 10)
+	{
+		putchar(ch);
+		ch++;
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
-
