@@ -8,23 +8,18 @@
  */
 int main(void)
 {
-    int digit = 0;
-
-    while (digit < 10)
-    {
-        putchar('0' + digit); // Print the digit as a character
-
-        if (digit < 9)
-        {
-            putchar(',');
-            putchar(' ');
-        }
-
-        digit++;
-    }
-
-    putchar('\n');
-
-    return (0);
+	int c = 0;
+	/* your code goes there */
+	while (c < 10)
+	{
+		putchar(48 + c);
+		if (c != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		c++;
+	}
+	putchar('\n');
+	return (0);
 }
-

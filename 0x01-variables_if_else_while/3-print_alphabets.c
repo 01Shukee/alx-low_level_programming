@@ -1,13 +1,14 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /*
  * main - Entry Point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-    char ch = 'a';  // Initialize character 'a'
+    char ch = 'a';
 
     // Print lowercase and uppercase alphabets
     while (ch <= 'Z')
@@ -21,4 +22,3 @@ int main(void)
     putchar('\n');  // Print a newline
     return (0);
 }
-
