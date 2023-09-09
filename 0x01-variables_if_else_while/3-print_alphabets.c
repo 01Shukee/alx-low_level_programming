@@ -1,4 +1,4 @@
-#include <stdio.h>  // Include the necessary header for putchar
+#include <stdio.h>
 
 /*
  * main - Entry Point
@@ -9,22 +9,16 @@ int main(void)
 {
     char ch = 'a';  // Initialize character 'a'
 
-    // Print lowercase alphabet
-    while (ch <= 'z')
-    {
-        putchar(ch);
-        ch++;
-    }
-
-    ch = 'A';  // Reset the character to 'A'
-
-    // Print uppercase alphabet
+    // Print lowercase and uppercase alphabets
     while (ch <= 'Z')
     {
         putchar(ch);
+        if (ch == 'Z')
+            ch = 'a' - 1;  // Reset the character to 'a' - 1 to continue with lowercase
         ch++;
     }
 
     putchar('\n');  // Print a newline
     return (0);
 }
+

@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Description: Prints numbers from 0 to 9 separated by commas and spaces.
+ * Return: 0 (SUCCESS)
+ */
 int main(void)
 {
     int digit = 0;
@@ -10,15 +16,15 @@ int main(void)
 
         if (digit < 9)
         {
-            putchar(',');   // Print a comma
-            putchar(' ');   // Print a space
+            putchar(',');
+            putchar(' ');
         }
 
         digit++;
     }
 
-    putchar('\n'); // Print a newline character
+    putchar('\n');
 
-    return 0;
+    return (0);
 }
 
