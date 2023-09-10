@@ -9,9 +9,9 @@ int main(void)
 {
 	int c;
 	int d;
-	int a = 0;
-
-	while (a < 10)
+	int e = 0;
+	/* your code goes there */
+	while (e < 10)
 	{
 		d = 0;
 		while (d < 10)
@@ -38,4 +38,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-}
+}}
