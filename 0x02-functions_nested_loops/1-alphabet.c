@@ -1,14 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-/*
- * main - Entry Point
- * Return: Always 0 (Success)
+#include "main.h"
+
+/**
+ * print_alphabet - Entry point
+ * Return:0
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	for (int i = 97; i <= 122; i++)
+	char c = 'a';
+
+	while (c <= 'z')
 	{
-	putchar(i);
+		_putchar(c);
+		c++;
+
 	}
-        return (0);
+	_putchar('\n');
+
 }
