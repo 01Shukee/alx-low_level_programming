@@ -1,15 +1,19 @@
-#include "main.h"
+include "main.h"
 /**
  * print_numbers - prints numbers
  * Return:0
  */
 void print_numbers(void)
 {
-	int i;
+	char n = 0;
 
-	for(i = 48; i <= 57; i++)
+	while (n <= 9)
 	{
-		_putchar(i);
+
+		_putchar('0' + n);
+		n++;
+
 	}
+
 	_putchar('\n');
 }

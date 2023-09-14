@@ -1,29 +1,33 @@
 #include "main.h"
-
 /**
- * print_triangle - prints a triangle made of '#' characters
- * @size: size of the triangle
+ * print_triangle - check for a digit
+ * @size : integer type
+ * Return:void
  */
 void print_triangle(int size)
 {
-    if (size <= 0)
-    {
-        _putchar('\n');
-        return;
-    }
+	int i = 1, ii;
 
-    for (int i = 1; i <= size; i++)
-    {
-        for (int j = 1; j <= size - i; j++)
-        {
-            _putchar(' ');
-        }
+	while (i <= size && size > 0)
+	{
+		ii = 0;
+		while (ii < size - i)
+		{
+			_putchar(' ');
+			ii++;
+		}
+		ii = 0;
+		while (ii < i)
+		{
+			_putchar('#');
+			ii++;
+		}
+		_putchar('\n');
+		i++;
+	}
 
-        for (int k = 1; k <= i; k++)
-        {
-            _putchar('#');
-        }
+	if (i == 1)
 
-        _putchar('\n');
-    }
+		_putchar('\n');
+
 }
