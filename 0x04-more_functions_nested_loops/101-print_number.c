@@ -1,30 +1,46 @@
-#include <stdio.h>
+#include "holberton.h"
+
 /**
- *main - largest prime facter of 612852475143.
- *Return: 0
+ * print_number - Function that prints an integer.
+ * @n: int type number
+ * Description: Can only use _putchar to print.
  */
-int main(void)
+void print_number(int n)
 {
-	long int x, i, pf;
+	long m; /* power of 10 */
+	int c; /* boolean check */
+	long num; /* convert int to long */
 
-	pf = -1;
-	x = 612852475143;
-
-	while (x % 2 == 0)
+	num = n;
+	/* negatives */
+	if (num < 0)
 	{
-		pf = 2;
-		x = x / 2;
+		num *= -1;
+		_putchar('-');
 	}
-	for (i = 3; i <= x / 2; i = i + 2)
+
+	/* count up */
+	m = 1;
+	c = 1;
+	while (c)
 	{
-		while (x % i == 0)
+		if (num / (m * 10) > 0)
+			m *= 10;
+		else
+			c = 0;
+	}
+
+	/* count down */
+	while (num >= 0)
+	{
+		if (m == 1)
 		{
-			pf = i;
-			x = x / i;
+			_putchar(num % 10 + '0');
+			num = -1;
+		}
+		else
+		{
+			_putchar((num / m % 10) + '0');
+			m /= 10;
 		}
 	}
-	if (x > 2)
-		pf = x;
-	printf("%ld\n", pf);
-	return (0);
-}
