@@ -8,31 +8,16 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-    int i, diff;
+	int i;
+	int res;
 
-    for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
-    {
-        if (s1[i] != s2[i])
-        {
-            diff = s1[i] - s2[i];
-            break;
-        }
-    }
+	i = 0;
+	while (s1[i] != '\0' && s1[i] == s2[i])
+	{
+		i++;
+	}
+	res = s1[i] - s2[i];
 
-    if (s1[i] == '\0' && s2[i] == '\0')
-        diff = 0;
+	return (res);
 
-    return diff;
-}
-
-int main()
-{
-    char str1[] = "Hello";
-    char str2[] = "World";
-
-    int result = _strcmp(str1, str2);
-
-    printf("Result: %d\n", result);
-
-    return 0;
 }
