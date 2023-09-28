@@ -1,24 +1,23 @@
 #include "main.h"
 
 /**
- * _pow_recursion - returns the value of x raised to the power of y
- * @x: number to be used
- * @y: exponent to be used
- *
- * Return: x ^ y
+ * _pow_recursion - Returns the value of x raised to the power of y.
+ * @x: The number to be raised.
+ * @y: The power.
+ * this task is done by temesgen abdissa
+ * Return: The value of x raised to the power of y.
  */
 int _pow_recursion(int x, int y)
 {
-    if (y < 0)
-    {
-        return -1; // Handle negative exponent as an error or return an appropriate value.
-    }
-    else if (y == 0)
-    {
-        return 1; // Anything raised to the power of 0 is 1.
-    }
-    else
-    {
-        return x * _pow_recursion(x, y - 1);
-    }
+	int result = x;
+
+	if (y < 0)
+		return (-1);
+
+	else if (y == 0)
+		return (1);
+
+	result *= _pow_recursion(x, y - 1);
+
+	return (result);
 }

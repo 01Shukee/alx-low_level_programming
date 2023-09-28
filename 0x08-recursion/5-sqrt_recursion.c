@@ -1,30 +1,31 @@
 #include "main.h"
-
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: number to be used
- *
- * Return: the square root of n
+ *test_mult - returns the natural square root of a number.
+ *@n:num to square root
+ *@i:int mult test
+ * Return: Always 0 (Success)
+ */
+int test_mult(int n, int i)
+{
+	if (i * i > n)
+	{
+		return (-1);
+	}
+	if (i * i == n)
+	{
+		return (i);
+	}
+	else
+	{
+		return (test_mult(n, i + 1));
+	}
+}
+/**
+ *_sqrt_recursion - function that returns x raised to the power of y
+ *@n: num to square root
+ * Return: Always 0 (Success)
  */
 int _sqrt_recursion(int n)
 {
-	if (n == 1 || n == 0)
-		return (n);
-	return (_sqrt(0, n));
-}
-
-/**
- * _sqrt - returns the square root of a number
- * @n: test number
- * @x: squared number
- *
- * Return: the square root of n
- */
-int _sqrt(int n, int x)
-{
-	if (n > x / 2)
-		return (-1);
-	else if (n * n == x)
-		return (n);
-	return (_sqrt(n + 1, x));
+	return (test_mult(n, 1));
 }
