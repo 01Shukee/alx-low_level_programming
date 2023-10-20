@@ -1,14 +1,18 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
+
 /**
- * print_list -  prints all the elements of a list_t list.
- * @h: Adress of the head of the linked list to print
- * Return: Unsigned int with the number of nodes printed
+ * print_list - check the code for Holberton School students.
+ * @h: name of the list
+ * Return: the number of nodes.
  */
 size_t print_list(const list_t *h)
 {
-	size_t j = 0;
+	int count = 0;
 
-	while (h != NULL)
+	while (h)
 	{
 		if (h->str == NULL)
 		{
@@ -16,10 +20,10 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%u] %s\n", h->len, h->str);
+		printf("[%d] %s\n", h->len, h->str);
 		}
-		j++;
+		count++;
 		h = h->next;
 	}
-	return (j);
+	return (count);
 }
