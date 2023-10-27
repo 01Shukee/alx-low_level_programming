@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * @n: A pointer to the bit.
  * @index: The index to set the value at - indices start at 0.
